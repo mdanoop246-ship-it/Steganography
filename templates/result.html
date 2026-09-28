@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="page center"><div class="card result"><div class="success">✓</div>
+{% if mode == "encode" %}<h1>Secret image hidden successfully</h1><p>Your encrypted payload is embedded in the stego image.</p>
+<div class="metrics"><div><b>{{ metrics.psnr }} dB</b><span>PSNR</span></div><div><b>{{ metrics.mse }}</b><span>MSE</span></div><div><b>{{ metrics.ssim }}</b><span>SSIM</span></div></div>
+{% else %}<h1>Secret image extracted successfully</h1><p>The hidden image was decrypted with the supplied password.</p>{% endif %}
+<a class="btn" href="{{ url_for('download', filename=filename) }}">Download PNG</a><a class="textlink" href="{{ url_for('index') }}">Back to home</a></div></div>
+{% endblock %}

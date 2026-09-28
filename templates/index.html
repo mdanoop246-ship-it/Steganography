@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero"><div><span class="pill">Secure • Private • Software-only</span><h1>Hide a secret image inside another image.</h1>
+<p>Encrypt the confidential image, embed it invisibly using LSB steganography, and extract it later with the correct password.</p>
+<div class="actions"><a class="btn" href="{{ url_for('encode') }}">Hide Secret Image</a><a class="btn secondary" href="{{ url_for('decode') }}">Extract Secret Image</a></div></div>
+<div class="visual"><div>🖼️</div><span>+</span><div>🔐</div><span>→</span><div>🖼️</div></div></section>
+<section class="grid"><div class="card"><h3>Encrypted</h3><p>Secret image bytes are protected with Fernet authenticated encryption derived from your password.</p></div><div class="card"><h3>High visual quality</h3><p>Only the least significant bit of RGB channels is changed during embedding.</p></div><div class="card"><h3>Measurable</h3><p>Encoding reports MSE, PSNR and SSIM so image quality can be evaluated.</p></div></section>
+{% endblock %}

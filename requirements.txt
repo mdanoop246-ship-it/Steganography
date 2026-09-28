@@ -1,0 +1,6 @@
+Flask>=3.0,<4
+Pillow>=10,<13
+cryptography>=42,<47
+numpy>=1.26,<3
+scikit-image>=0.22,<0.26
+Werkzeug>=3.0,<4
